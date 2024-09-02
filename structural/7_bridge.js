@@ -16,18 +16,21 @@ class Color {
     }
 }
 
+//realzation
 class BlackColor extends Color {
     constructor() {
         super("black");
     }
 }
 
+//realzation
 class RedColor extends Color {
     constructor() {
         super("red");
     }
 }
 
+//abstraction
 class Audi extends Model {
     constructor(color) {
         super(color);
@@ -38,6 +41,7 @@ class Audi extends Model {
     }
 }
 
+//abstraction
 class Bmw extends Model {
     constructor(color) {
         super(color);

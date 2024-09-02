@@ -11,6 +11,7 @@ class CarAccess {
     }
 }
 
+//proxy
 class SecuritySystem {
     constructor(door) {
         this.door = door;
@@ -25,7 +26,7 @@ class SecuritySystem {
     }
 
     authenticate(password) {
-        return password === 'Elon';
+        return password === 'Elon Musk';
     }
 
     close() {
@@ -34,6 +35,6 @@ class SecuritySystem {
 }
 
 const door = new SecuritySystem(new CarAccess());
-door.open('Vasya');
-door.open('Elon');
+door.open('Vasya Pupkin');
+door.open('Elon Musk');
 door.close();

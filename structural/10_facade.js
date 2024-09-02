@@ -23,11 +23,11 @@ class Conveyor {
     }
 
     setExterior() {
-        console.log('Added interior!');
+        console.log('Added exterior!');
     }
 
     setWheels() {
-        console.log('Wheels!');
+        console.log('Added wheels!');
     }
 
     addElectronics() {

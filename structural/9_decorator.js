@@ -2,10 +2,10 @@
 // HOC, Pure Component, ErrorBoundary(static getDerivedStateFromError/ componentDidCatch)
 // Ціль не створить, а змінювать існуючі класи.
 
-class Car {
+class Mercedes {
 
     constructor() {
-        this.price = 10000;
+        this.price = 50000;
         this.model = 'Car'
     }
 
@@ -18,21 +18,23 @@ class Car {
     }
 }
 
-class Tesla extends Car {
+class Brabus extends class Mercedes {
+ {
 
     constructor() {
         super();
         this.price = 100000;
-        this.model = 'Tesla';
+        this.model = 'Brabus';
     }
 }
 
-class Audi extends Car {
+class AMG extends class Mercedes {
+ {
 
     constructor() {
         super();
-        this.price = 50000;
-        this.model = 'Audi';
+        this.price = 90000;
+        this.model = 'AMG';
     }
 }
 
@@ -42,7 +44,7 @@ class Autopilot {
     }
 
     getPrice() {
-        return this.car.getPrice() + 5000;
+        return this.car.getPrice() + 10000;
     }
 
     getDescription() {
@@ -50,28 +52,28 @@ class Autopilot {
     }
 }
 
-class Parctronic {
+class Armor {
     constructor(car) {
         this.car = car;
     }
 
     getPrice() {
-        return this.car.getPrice() + 3000;
+        return this.car.getPrice() + 30000;
     }
 
     getDescription() {
-        return `${this.car.getDescription()} with parktronic`;
+        return `${this.car.getDescription()} with armor`;
     }
 }
 
-// //version with autopilot and parktronic
-let tesla = new Tesla();
-tesla = new Autopilot(tesla);
-tesla = new Parktronic(tesla);
+// //version with autopilot and armor
+let brabus = new Brabus();
+brabus = new Autopilot(brabus);
+brabus = new Armor(brabus);
 
 //version with autopilot only
-let audi = new Audi();
-audi = new Parktronic(audi);
+let amg = new AMG();
+amg = new Armor(amg);
 
-console.log(tesla.getPrice(), tesla.getDescription());
-console.log(audi.getPrice(), audi.getDescription());
+console.log(brabus.getPrice(), brabus.getDescription());
+console.log(amg.getPrice(), amg.getDescription());

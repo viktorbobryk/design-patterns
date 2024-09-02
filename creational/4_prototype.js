@@ -9,19 +9,21 @@ class TeslaCar {
         this.autopilot = autopilot;
     }
 
-    //базова реалізація класа/clone
+    //basic class implementation /clone
     clone() {
         return new TeslaCar(this.model, this.price, this.interior, this.autopilot);
     }
 }
 
+//Produce base auto
 const prototypeCar = new TeslaCar('S', 80000, 'black', false);
 
-
+//Cloning of base auto
 const car1 = prototypeCar.clone();
 const car2 = prototypeCar.clone();
 const car3 = prototypeCar.clone();
 
+//changes for particular auto
 car1.interior = 'white';
 car1.autopilot = true;
 
