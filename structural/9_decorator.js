@@ -18,8 +18,7 @@ class Mercedes {
     }
 }
 
-class Brabus extends class Mercedes {
- {
+class Brabus extends Mercedes {
 
     constructor() {
         super();
@@ -28,12 +27,11 @@ class Brabus extends class Mercedes {
     }
 }
 
-class AMG extends class Mercedes {
- {
+class AMG extends Mercedes {
 
     constructor() {
         super();
-        this.price = 90000;
+        this.price = 120000;
         this.model = 'AMG';
     }
 }
