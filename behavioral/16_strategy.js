@@ -1,18 +1,23 @@
 // Стратегія — це поведінковий патерн, який визначає сімейство схожих алгоритмів і розміщує кожен з них у власному класі.
 //             Після цього алгоритми можна заміняти один на інший прямо під час виконання програми.
 
+//strategy
 const baseStrategy = (amount) => {
     return amount;
 }
 
+//strategy
 const premiumStrategy = (amount) => {
     return amount * 0.85;
 }
 
+//strategy
 const platinumStrategy = (amount) =>  {
     return amount * 0.65;
 }
 
+
+//context
 class AutoCard {
     constructor(discount) {
         this.discount = discount;

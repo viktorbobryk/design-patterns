@@ -46,6 +46,7 @@ class Transmission extends Equipment {
 class Composite extends Equipment {
     constructor() {
         super();
+		// composite
         this.equipments = [];
     }
 

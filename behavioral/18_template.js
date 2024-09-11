@@ -2,7 +2,7 @@
 // перекладаючи відповідальність за деякі його кроки на підкласи. Патерн дозволяє підкласам перевизначати кроки алгоритму,
 // не змінюючи його загальної структури.
 
-class Builder {
+class BuilderTemplate {
     build() {
         this.addEngine();
         this.installChassis();
@@ -11,7 +11,7 @@ class Builder {
     }
 }
 
-class TeslaBuilder extends Builder {
+class TeslaBuilder extends BuilderTemplate {
     addEngine() {
         console.log('Add Electronic Engine');
     }
@@ -29,9 +29,9 @@ class TeslaBuilder extends Builder {
     }
 }
 
-class BmwBuilder extends Builder {
+class BmwBuilder extends BuilderTemplate {
     addEngine() {
-        console.log('Add BMW Engine');
+        console.log('Add Diesel Engine');
     }
 
     installChassis() {

@@ -7,6 +7,7 @@ class Model {
     }
 }
 
+//bridge
 class Color {
     constructor(type) {
         this.type = type;
